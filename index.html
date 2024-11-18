@@ -79,7 +79,6 @@
     </style>
 </head>
 <body>
-    <!-- Signup Form -->
     <div class="form-container" id="signupFormContainer">
         <h2>Signup</h2>
         <form id="signupForm" method="POST" name="contact" netlify>
@@ -95,7 +94,6 @@
         </form>
     </div>
 
-    <!-- Quiz Form -->
     <div class="quiz-container" id="quizContainer">
         <h2>Complete the Quiz</h2>
         <form id="quizForm">
@@ -179,7 +177,7 @@
             const userAnswers = new FormData(quizForm);
 
             for (let [key, value] of userAnswers.entries()) {
-                const inputField = document.querySelector([name="${key}"]);
+                const inputField = document.querySelector(`[name="${key}"]`);
                 if (value.toLowerCase() === correctAnswers[key]) {
                     inputField.classList.add('correct');
                     inputField.classList.remove('wrong');
