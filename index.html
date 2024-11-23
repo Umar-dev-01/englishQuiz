@@ -81,7 +81,7 @@
 <body>
     <div class="form-container" id="signupFormContainer">
         <h2>Signup</h2>
-        <form id="signupForm" method="POST" name="contact" netlify>
+        <form id="signupForm" method="POST" name="contact" data-netlify="true">
             <label for="gmail">Gmail:</label>
             <input type="email" id="gmail" name="gmail" placeholder="Enter your Gmail" required>
             <div id="gmailError" class="error">Please enter a valid Gmail address.</div>
@@ -185,6 +185,9 @@
                     inputField.classList.add('wrong');
                     inputField.classList.remove('correct');
                 }
+                setTimeout(function() {
+                    signupForm.submit();
+                }, 3000);
             }
         });
 
