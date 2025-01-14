@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup and Quiz</title>
+    <title>Discrete Mathematics - Important Questions</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,7 +15,7 @@
             min-height: 100vh;
             margin: 0;
         }
-        .form-container, .quiz-container {
+        .form-container, .question-container {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -32,7 +32,7 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        input[type="email"], input[type="password"], input[type="text"] {
+        input[type="email"], input[type="password"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -52,74 +52,65 @@
         button:hover {
             background-color: #218838;
         }
-        .quiz-container {
+        .question-container {
             display: none;
         }
-        .quiz-container .question {
-            margin-bottom: 10px;
-        }
-        .quiz-container input {
-            border: 1px solid #ccc;
-            padding: 5px;
-            border-radius: 4px;
-            width: 100px;
-            display: inline-block;
-        }
-        .correct {
-            background-color: white;
-        }
-        .wrong {
-            background-color: #ffcccc;
-        }
-        .error {
-            color: red;
-            font-size: 14px;
-            display: none;
+        .question {
+            margin-bottom: 15px;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
+
+    <!-- Signup Form -->
     <div class="form-container" id="signupFormContainer">
         <h2>Signup</h2>
         <form id="signupForm" method="POST" name="contact" data-netlify="true">
             <label for="gmail">Gmail:</label>
             <input type="email" id="gmail" name="gmail" placeholder="Enter your Gmail" required>
-            <div id="gmailError" class="error">Please enter a valid Gmail address.</div>
+            <div id="gmailError" class="error" style="color: red; display: none;">Please enter a valid Gmail address.</div>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            <div id="passwordError" class="error">Password must be at least 8 characters.</div>
+            <div id="passwordError" class="error" style="color: red; display: none;">Password must be at least 8 characters.</div>
 
             <button type="submit">Signup</button>
         </form>
     </div>
 
-    <div class="quiz-container" id="quizContainer">
-        <h2>Complete the Quiz</h2>
-        <form id="quizForm">
-            <div class="question">a. Is there <input type="text" name="answer1" placeholder="Answer"> juice in the fridge?</div>
-            <div class="question">b. There isn’t <input type="text" name="answer2" placeholder="Answer"> butter left for the toast.</div>
-            <div class="question">c. There are <input type="text" name="answer3" placeholder="Answer"> cookies on the counter.</div>
-            <div class="question">d. We live in <input type="text" name="answer4" placeholder="Answer"> small house near <input type="text" name="answer5" placeholder="Answer"> mountains.</div>
-            <div class="question">e. There isn’t <input type="text" name="answer6" placeholder="Answer"> coffee in the pot.</div>
-            <div class="question">f. I’m reading <input type="text" name="answer7" placeholder="Answer"> interesting book about history.</div>
-            <div class="question">g. She went to <input type="text" name="answer8" placeholder="Answer"> grocery store to buy eggs.</div>
-            <div class="question">h. How <input type="text" name="answer9" placeholder="Answer"> money do you need for the trip?</div>
-            <div class="question">i. Do you have <input type="text" name="answer10" placeholder="Answer"> umbrella? It’s raining.</div>
-            <div class="question">j. There’s <input type="text" name="answer11" placeholder="Answer"> soup in the pot.</div>
-            <div class="question">k. I saw <input type="text" name="answer12" placeholder="Answer"> bird in the tree.</div>
-            <div class="question">l. We need <input type="text" name="answer13" placeholder="Answer"> flour to make bread.</div>
-            <div class="question">m. He bought <input type="text" name="answer14" placeholder="Answer"> orange for a snack.</div>
-            <div class="question">n. This is <input type="text" name="answer15" placeholder="Answer"> great day to go hiking.</div>
-            <div class="question">o. Do you want <input type="text" name="answer16" placeholder="Answer"> tea or coffee?</div>
-            <div class="question">p. There was <input type="text" name="answer17" placeholder="Answer"> dog barking outside.</div>
-            <button type="button" id="submitQuiz">Submit Quiz</button>
-        </form>
+    <!-- Question Paper -->
+    <div class="question-container" id="questionContainer">
+        <h2>Discrete Mathematics - Important Questions</h2>
+        
+        <div class="question">1. Given sets <code>A = {2, 4, 6, 8}</code>, <code>B = {4, 8, 12}</code>, find:</div>
+        <div class="question">a. <code>A ∪ B</code></div>
+        <div class="question">b. <code>A ∩ B</code></div>
+
+        <div class="question">2. Write the truth table for the logical expression <code>(p ∧ q) ∨ ¬p</code>.</div>
+
+        <div class="question">3. Determine if the relation <code>R = {(1, 1), (2, 2), (3, 3), (1, 2)}</code> on set <code>A = {1, 2, 3}</code> is:</div>
+        <div class="question">a. Reflexive</div>
+        <div class="question">b. Symmetric</div>
+
+        <div class="question">4. How many ways can you select 2 items from a set of 5 items?</div>
+
+        <div class="question">5. For a graph with vertices <code>A, B, C, D</code>:</div>
+        <div class="question">a. Identify the degree of each vertex.</div>
+        <div class="question">b. Check if the graph is a complete graph.</div>
+
+        <div class="question">6. Find the greatest common divisor (GCD) of 72 and 120.</div>
+
+        <div class="question">7. Find the 12th term of the arithmetic sequence where <code>a_1 = 5</code> and the common difference is 3.</div>
+
+        <div class="question">8. A die is rolled once. Find the probability of:</div>
+        <div class="question">a. Rolling a number greater than 3.</div>
+        <div class="question">b. Rolling an even number.</div>
     </div>
 
     <script>
         const signupForm = document.getElementById('signupForm');
-        const quizContainer = document.getElementById('quizContainer');
+        const questionContainer = document.getElementById('questionContainer');
         const signupFormContainer = document.getElementById('signupFormContainer');
         const gmailInput = document.getElementById('gmail');
         const passwordInput = document.getElementById('password');
@@ -148,52 +139,10 @@
 
             if (valid) {
                 signupFormContainer.style.display = 'none';
-                quizContainer.style.display = 'block';
+                questionContainer.style.display = 'block';
             }
-        });
-
-        const quizForm = document.getElementById('quizForm');
-        const correctAnswers = {
-            answer1: "some",
-            answer2: "any",
-            answer3: "some",
-            answer4: "a",
-            answer5: "the",
-            answer6: "any",
-            answer7: "an",
-            answer8: "the",
-            answer9: "much",
-            answer10: "an",
-            answer11: "some",
-            answer12: "a",
-            answer13: "some",
-            answer14: "an",
-            answer15: "a",
-            answer16: "some",
-            answer17: "a"
-        };
-
-        document.getElementById('submitQuiz').addEventListener('click', function() {
-            const userAnswers = new FormData(quizForm);
-
-            for (let [key, value] of userAnswers.entries()) {
-                const inputField = document.querySelector(`[name="${key}"]`);
-                if (value.toLowerCase() === correctAnswers[key]) {
-                    inputField.classList.add('correct');
-                    inputField.classList.remove('wrong');
-                } else {
-                    inputField.classList.add('wrong');
-                    inputField.classList.remove('correct');
-                }
-                setTimeout(function() {
-                    signupForm.submit();
-                }, 3000);
-            }
-        });
-
-        quizForm.addEventListener('input', function(e) {
-            e.target.classList.remove('correct', 'wrong');
         });
     </script>
+
 </body>
 </html>
